@@ -15,13 +15,19 @@ namespace CFBlog0920.Areas.Identity
     {
         public void Configure(IWebHostBuilder builder)
         {
-            builder.ConfigureServices((context, services) => {
+            builder.ConfigureServices((context, services) =>
+            {
                 services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("DefaultConnection")));
 
-                services.AddDefaultIdentity<BlogUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                    .AddEntityFrameworkStores<ApplicationDbContext>();
+                services.AddIdentity<BlogUser, IdentityRole>()
+                    .AddEntityFrameworkStores<ApplicationDbContext>()
+                    .AddDefaultUI()
+                    .AddDefaultTokenProviders();
+
+                //services.AddDefaultIdentity<BlogUser>(options => options.SignIn.RequireConfirmedAccount = false)
+                //    .AddEntityFrameworkStores<ApplicationDbContext>();
             });
         }
     }
