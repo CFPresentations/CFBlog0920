@@ -28,10 +28,10 @@ namespace CFBlog0920.Data
             //Seed Default User
             var defaultUser = new BlogUser
             {
-                UserName = "superadmin",
-                Email = "superadmin@gmail.com",
-                FirstName = "Mukesh",
-                LastName = "Murugan",
+                UserName = "araynor@codeffoundry.com",
+                Email = "araynor@coderfoundry.com",
+                FirstName = "Antonio",
+                LastName = "Raynor",
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true
             };
