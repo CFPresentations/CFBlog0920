@@ -21,7 +21,7 @@ namespace CFBlog0920.Areas.Identity
                     options.UseSqlServer(
                         context.Configuration.GetConnectionString("DefaultConnection")));
 
-                services.AddIdentity<BlogUser, IdentityRole>()
+                services.AddIdentity<BlogUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                     .AddEntityFrameworkStores<ApplicationDbContext>()
                     .AddDefaultUI()
                     .AddDefaultTokenProviders();

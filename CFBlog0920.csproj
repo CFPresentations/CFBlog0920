@@ -9,13 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="HTML\**" />
+    <Content Remove="HTML\**" />
+    <EmbeddedResource Remove="HTML\**" />
+    <None Remove="HTML\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="Areas\Identity\Data\CFBlog0920Context.cs" />
+    <Compile Remove="Areas\Identity\IdentityHostingStartup.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
@@ -25,6 +34,96 @@
 
   <ItemGroup>
     <Folder Include="Areas\Identity\Data\" />
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\animate\animate.css" />
+    <None Include="wwwroot\css\bootstrap\bootstrap.min.css" />
+    <None Include="wwwroot\css\font-awesome\font-awesome.css" />
+    <None Include="wwwroot\css\fonts.min.css" />
+    <None Include="wwwroot\css\magnific-popup\magnific-popup.css" />
+    <None Include="wwwroot\css\media.css" />
+    <None Include="wwwroot\css\owl.carousel\owl.carousel.min.css" />
+    <None Include="wwwroot\css\owl.carousel\owl.theme.default.min.css" />
+    <None Include="wwwroot\css\style.css" />
+    <None Include="wwwroot\fonts\fontawesome\fontawesome-webfont.eot" />
+    <None Include="wwwroot\fonts\fontawesome\fontawesome-webfont.svg" />
+    <None Include="wwwroot\fonts\fontawesome\fontawesome-webfont.ttf" />
+    <None Include="wwwroot\fonts\fontawesome\fontawesome-webfont.woff" />
+    <None Include="wwwroot\fonts\fontawesome\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\fonts\fontawesome\FontAwesome.otf" />
+    <None Include="wwwroot\img\blog-grid\blog-grid-1.jpg" />
+    <None Include="wwwroot\img\blog-grid\blog-grid-2.jpg" />
+    <None Include="wwwroot\img\blog-grid\blog-grid-3.jpg" />
+    <None Include="wwwroot\img\blog-grid\blog-grid-4.jpg" />
+    <None Include="wwwroot\img\blog-grid\Thumbs.db" />
+    <None Include="wwwroot\img\blog-list-1.jpg" />
+    <None Include="wwwroot\img\blog_bg.jpg" />
+    <None Include="wwwroot\img\favicon\apple-touch-icon-114x114.png" />
+    <None Include="wwwroot\img\favicon\apple-touch-icon-72x72.png" />
+    <None Include="wwwroot\img\favicon\apple-touch-icon.png" />
+    <None Include="wwwroot\img\favicon\favicon.ico" />
+    <None Include="wwwroot\img\favicon\Thumbs.db" />
+    <None Include="wwwroot\img\first_screen_bg.jpg" />
+    <None Include="wwwroot\img\icon1.png" />
+    <None Include="wwwroot\img\icon2.png" />
+    <None Include="wwwroot\img\icon3.png" />
+    <None Include="wwwroot\img\icon4.png" />
+    <None Include="wwwroot\img\icon5.png" />
+    <None Include="wwwroot\img\icon6.png" />
+    <None Include="wwwroot\img\icon7.png" />
+    <None Include="wwwroot\img\img-1.jpg" />
+    <None Include="wwwroot\img\img-2.jpg" />
+    <None Include="wwwroot\img\logo.png" />
+    <None Include="wwwroot\img\portfolio\Thumbs.db" />
+    <None Include="wwwroot\img\portfolio\work-1.jpg" />
+    <None Include="wwwroot\img\portfolio\work-2.jpg" />
+    <None Include="wwwroot\img\portfolio\work-3.jpg" />
+    <None Include="wwwroot\img\portfolio\work-4.jpg" />
+    <None Include="wwwroot\img\portfolio\work-5.jpg" />
+    <None Include="wwwroot\img\portfolio\work-6.jpg" />
+    <None Include="wwwroot\img\testimonial-1.jpg" />
+    <None Include="wwwroot\img\testimonial-2.jpg" />
+    <None Include="wwwroot\img\Thumbs.db" />
+    <None Include="wwwroot\js\bootstrap\bootstrap.js" />
+    <None Include="wwwroot\js\countUp\jquery.countup.min.js" />
+    <None Include="wwwroot\js\functions.js" />
+    <None Include="wwwroot\js\html5shiv-master\html5shiv.js" />
+    <None Include="wwwroot\js\isotope\isotope.pkgd.min.js" />
+    <None Include="wwwroot\js\jquery\jquery.min.js" />
+    <None Include="wwwroot\js\magnific-popup\magnific-popup.min.js" />
+    <None Include="wwwroot\js\page-scroll-to-id\jquery.malihu.PageScroll2id.js" />
+    <None Include="wwwroot\js\parallax\parallax.min.js" />
+    <None Include="wwwroot\js\send.js" />
+    <None Include="wwwroot\js\slideout\slideout.min.js" />
+    <None Include="wwwroot\js\waypoints\jquery.waypoints.min.js" />
+    <None Include="wwwroot\js\wow\wow.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\lib\jquery\dist\jquery.min.map" />
   </ItemGroup>
 
 </Project>
